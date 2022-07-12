@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="css/Register.css">
+    
+    
+</head>
+<body >
+  
+       <div class="container" id="container"> 
+          <div class="form-container sign-up-container">
+              <form action="#">
+                  <h1>Create Account</h1>
+                <input onkeypress="Namefu()"  type="text" placeholder="Name" id="RegisterName" class="form-control mb-2">
+                <div id="NameAlert" class="alart d-none">Name is NOT Valid</div>
+                <input onkeypress="emailfu()" type="text" placeholder="Email" id="RegisterEmail" class="form-control mb-2">
+                <div id="EmailAlert" class="alart d-none">Email is NOT Valid</div>
+                <input  type="number" placeholder="Age" id="RegisterAge" class="form-control mb-2">
+                <input id="SignUpPassword" type="password" placeholder="Password" class="form-control mb-2 ">
+                <div id="Success" class="alartt mb-3 d-none text-center">SuccessFul!</div>
+                <div id="Req" class="alartt mb-3 d-none text-center">All Inputs Are Required!</div>
+                <button id="btnn">Sign Up</button>
+              </form>
+          </div>
+          <div class="form-container sign-in-container">
+              <form action="#">
+                  <h1 class="mb-5">Sign in</h1>
+                  <input  type="text" placeholder="Email" id="LoginEmail" class="form-control mb-2">
+                  <input id="LoginPassword" type="password" placeholder="Password" class="form-control mb-2 ">
+                 
+                  <button type="button" class="botn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Forgot your password?
+                  </button>
+                  <button onclick="login()">Sign In</button>
+              </form>
+          </div>
+          <div class="overlay-container">
+              <div class="overlay">
+                  <div class="overlay-panel overlay-left">
+                      <h1>Welcome Back!</h1>
+                      <p>To keep connected with us please login with your personal info</p>
+                      <button class="ghost" id="signIn">Sign In</button>
+                  </div>
+                  <div class="overlay-panel overlay-right">
+                      <h1>Hello, Friend!</h1>
+                      <p>Enter your personal details and start journey with us</p>
+                      <button class="ghost" id="signUp">Sign Up</button>
+                  </div>
+              </div>
+          </div>
+      </div> 
+      
+
+
+     <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reset Password</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input  type="text" placeholder="Email" id="Forgot" class="form-control mb-2">
+        <button type="button" onclick="forgotpass()" class="btn btn-primary mb-3">Send</button>
+        <div id="inputs">
+
+          <input  type="number" placeholder="Code" id="code" class="form-control mb-2">
+        <input id="resetPassword" type="Password" placeholder="Enter New Password" class="form-control mb-2 ">
+        <input id="ConfirmPassword" type="Password" placeholder="Confirm New Password" class="form-control mb-2 ">
+        <div id="Success" class="alartt mb-3 d-none text-center">SuccessFul!</div>
+        
+        <button type="button" onclick="ResetPass()" class="btn btn-primary mb-3">Save</button>
+        <div id="inputs">
+      </div>
+        
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+     
+    </div>
+
+    
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/validation.js"></script>
+    <script src="Js/Register.js"></script>
+   
+</body>
+
+</html>
